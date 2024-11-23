@@ -1,0 +1,63 @@
+<html>
+<head>
+<base href="." />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechHub - Productos</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilos\style-productos.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">TechHub</div>
+            <div class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="index.html#productos">Tope de Gama</a>
+                <a href="index.html#about">Nosotros</a>
+                <a href="index.html#contact">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="filters">
+        <div class="filters-content">
+            <div class="filter-group">
+                <label for="category">Categoría</label>
+                <select id="category">
+                    <option value="all">Todas las categorías</option>
+                    <option value="gpu">Tarjetas Gráficas</option>
+                    <option value="cpu">Procesadores</option>
+                    <option value="ram">Memoria RAM</option>
+                    <option value="motherboard">Placas Base</option>
+                    <option value="storage">Almacenamiento</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="range">Gama</label>
+                <select id="range">
+                    <option value="all">Todas las gamas</option>
+                    <option value="high">Gama Alta</option>
+                    <option value="mid">Gama Media</option>
+                    <option value="budget">Gama Baja</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="price">Rango de Precio</label>
+                <select id="price">
+                    <option value="all">Todos los precios</option>
+                    <option value="0-500">$0 - $500</option>
+                    <option value="501-1000">$501 - $1000</option>
+                    <option value="1001+">$1001+</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <div class="products-grid" id="productsContainer">
+        <!-- Los productos se generarán dinámicamente con JavaScript -->
+    </div>
+<script src="scripts\script-productos.js"></script>
+</body>
+</html>

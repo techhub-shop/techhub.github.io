@@ -1,0 +1,193 @@
+:root {
+    --primary: #7B2CBF;
+    --secondary: #9D4EDD;
+    --dark: #1A1A1A;
+    --light: #F8F9FA;
+    --accent: #5A189A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+nav {
+    background-color: rgba(26, 26, 26, 0.95);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--light);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.filters {
+    margin-top: 80px;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.filters-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.filter-group label {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.filter-group select {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--dark);
+    color: var(--light);
+    cursor: pointer;
+}
+
+.products-grid {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.product-category {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.high-end {
+    background-color: #FFD700;
+    color: black;
+}
+
+.mid-range {
+    background-color: #C0C0C0;
+    color: black;
+}
+
+.budget {
+    background-color: #CD7F32;
+    color: white;
+}
+
+.price {
+    color: var(--primary);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.amazon-button {
+    width: 100%;
+    background-color: #FF9900;
+    color: black;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.amazon-button:hover {
+    background-color: #FF8C00;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .filters-content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+}
